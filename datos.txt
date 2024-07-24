@@ -1,2 +1,2 @@
-variable1: 345
-variable2: 6765757
+variable1: 1
+variable2: 1

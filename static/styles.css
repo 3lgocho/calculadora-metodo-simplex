@@ -10,12 +10,31 @@ body {
 }
 
 form {
-    background: white;
+    font-family: Arial, sans-serif;
+    font-size: large;
+    background: rgb(255, 255, 255);
     padding: 20px;
     border-radius: 8px;
+    width: 25%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 input[type="number"] {
-    width: 50px;
+    width: 20%;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
 }
