@@ -3,7 +3,7 @@ function generateSecondForm(event) {
 
     // Obtener los valores de las variables y restricciones
     const variables = document.getElementById('variables').value;
-    const restricciones = document.getElementById('restricciones').value;
+    const restricciones = document.getElementById('cantidad_restricciones').value;
 
     // Generar la función objetivo
     const funcionObjetivoDiv = document.getElementById('funcionObjetivo');
@@ -21,12 +21,12 @@ function generateSecondForm(event) {
     funcionObjetivoDiv.appendChild(document.createElement('br'));
 
     // Generar las restricciones
-    const restriccionesDiv = document.getElementById('restriccionesContenedor');
-    restriccionesDiv.innerHTML = '<label>Restricciones:</label>';
+    const restriccionesDiv = document.getElementById('restricciones');
     for (let j = 1; j <= restricciones; j++) {
         const restriccionLabel = document.createElement('label');
         restriccionLabel.textContent = `Restricción ${j}:`;
         restriccionesDiv.appendChild(restriccionLabel);
+        console.log("pep")
         for (let k = 1; k <= variables; k++) {
             const input = document.createElement('input');
             input.type = 'text';
@@ -38,6 +38,7 @@ function generateSecondForm(event) {
             }
         }
         restriccionesDiv.appendChild(document.createElement('br'));
+        console.log(restriccionesDiv);
     }
 
     // Ocultar el primer formulario y mostrar el segundo
