@@ -14,12 +14,12 @@ form {
     background: rgb(255, 255, 255);
     padding: 20px;
     border-radius: 8px;
-    width: 25%;
+    width: auto;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 input[type="number"] {
-    width: 20%;
+    width: auto;
 }
 
 button {
