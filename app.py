@@ -1,4 +1,5 @@
 from flask import Flask, request, render_template
+from mainDosFases import matrizDatos  # Asegúrate de que la ruta de importación sea correcta
 
 app = Flask(__name__)
 
@@ -36,13 +37,11 @@ def procesar_datos():
         if operador_key in request.form:
             operadores.append(request.form[operador_key])
     
-    # Imprimir las matrices al final por la consola
-    print("Modo de optimización:", modo)
-    print("Función objetivo:", funcion_objetivo)
-    print("Restricciones:", restricciones)
-    print("Límites:", limites)
-    print("Operadores:", operadores)
-
+    # Crear una instancia de matrizDatos y procesar los datos
+    matriz = matrizDatos()
+    matriz.procesar_datos(modo, funcion_objetivo, restricciones, limites, operadores)
+    
+    # Aquí puedes adaptar el código para mostrar el resultado en una página web o retornar una respuesta adecuada
     return "Datos recibidos y procesados"
 
 if __name__ == '__main__':

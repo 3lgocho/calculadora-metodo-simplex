@@ -8,10 +8,10 @@ function generateSecondForm(event) {
     const selectmodo = document.createElement('select');
     selectmodo.name = 'selectmodo';
     const optionmax = document.createElement('option');
-    optionmax.value = 1;
+    optionmax.value = 'max';
     optionmax.text = 'Maximizar';
     const optionmin = document.createElement('option');
-    optionmin.value = 0;
+    optionmin.value = 'min';
     optionmin.text = 'Minimizar'; 
     selectmodo.appendChild(optionmin);
     selectmodo.appendChild(optionmax);
