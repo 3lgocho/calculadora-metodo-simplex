@@ -1,7 +1,7 @@
 tabla=[[]]
 arregloFilas=[]
 arregloCol=[]
-from Imprimir import *
+from magia.Imprimir import *
 
 class MetodoSimplex:
     '''
@@ -146,7 +146,7 @@ class MetodoSimplex:
     def start_MetodoSimplex_Max(self):
 
         impresion=Imprime(self.archivo)
-        estados=0
+        estados=1
         global tabla,arregloFilas,arregloCol
         print_Aux= Print()
         multiplesSol=Multiples_Solucion()

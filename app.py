@@ -1,11 +1,11 @@
 from flask import Flask, request, render_template
-from mainDosFases import matrizDatos  # Asegúrate de que la ruta de importación sea correcta
+from magia.mainDosFases import matrizDatos
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('index.html')  # Aquí renderiza tu archivo HTML principal
+    return render_template('index.html')
 
 @app.route('/procesar_datos', methods=['POST'])
 def procesar_datos():
@@ -37,12 +37,16 @@ def procesar_datos():
         if operador_key in request.form:
             operadores.append(request.form[operador_key])
     
-    # Crear una instancia de matrizDatos y procesar los datos
+    # Llamar a la función resolver_simplex con los datos recibidos
     matriz = matrizDatos()
     matriz.procesar_datos(modo, funcion_objetivo, restricciones, limites, operadores)
     
-    # Aquí puedes adaptar el código para mostrar el resultado en una página web o retornar una respuesta adecuada
-    return "Datos recibidos y procesados"
+    # Leer el archivo de resultados y pasar el contenido a la plantilla de resultados
+    with open("solucionDosFases", "r") as archivo:  # Abrir el archivo sin extensión
+        lineas = archivo.readlines()
+        resultados = [linea.strip() for linea in lineas]
+    
+    return render_template('resultado.html', resultados=resultados)
 
 if __name__ == '__main__':
     app.run(debug=True)

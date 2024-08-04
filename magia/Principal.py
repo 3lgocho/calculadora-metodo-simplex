@@ -4,8 +4,8 @@ global numeroVariablesDecision
 global numeroRestricciones
 global variableU
 
-from Controlador import*
-from Imprimir import*
+from magia.Controlador import*
+from magia.Imprimir import*
 
 coeficientesFuncionObjetivo = []
 restricciones = []
