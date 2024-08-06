@@ -1,5 +1,5 @@
 import copy
-from magia.MetodoSimplex import*
+from magia.simplex import*
 tabla=[[]]
 variablesDecision=0
 arregloCol=[]

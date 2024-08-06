@@ -1,4 +1,4 @@
-from magia.Principal import main
+from magia.Main import main
 
 class matrizDatos:
 

@@ -1,7 +1,7 @@
 tabla=[[]]
 arregloFilas=[]
 arregloCol=[]
-from magia.Imprimir import *
+from magia.escribir import *
 
 class MetodoSimplex:
     '''

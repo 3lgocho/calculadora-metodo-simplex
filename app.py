@@ -1,5 +1,5 @@
 from flask import Flask, request, render_template
-from magia.mainDosFases import matrizDatos
+from magia.dosfases import matrizDatos
 
 app = Flask(__name__)
 
