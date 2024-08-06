@@ -4,7 +4,7 @@
 ####Profesor:
 ######- 
 ####**Integrantes:**
-######-Andrés Hermoso 30911147
+######-Andrés Hermoso
 ######-Fabian Quijada 
 
 ###Ejecución del programa:
